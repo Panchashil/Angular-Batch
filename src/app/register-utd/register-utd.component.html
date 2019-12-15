@@ -1,0 +1,61 @@
+<div class="card">
+  <div class="card-header">Template Driven Form</div>
+  <div class="card-body">
+    <div class="row">
+      <div class="container col-md-6">
+        <form #frm="ngForm" (ngSubmit)="register(frm.value)" autocomplete="off">
+          <div class="form-group">
+            <label>Username:</label>
+            <input type="text" class="form-control" name="uname" [ngModel]="user.uname" #uname="ngModel" required
+              pattern="[a-z]+\@[a-z]+\.[a-z]{2,4}" />
+          </div>
+          <div class="alert alert-danger" *ngIf="uname.invalid && uname.touched">
+            <div *ngIf="uname.errors?.required">Username should be required</div>
+            <div *ngIf="uname.errors?.pattern">Please enter a valid username</div>
+          </div>
+          <div ngModelGroup="password" #userPassword="ngModelGroup">
+            <div class="form-group">
+              <label>Password:</label>
+              <input type="password" class="form-control" name="pwd" #pwd="ngModel" [ngModel]="user.password.pwd"
+                required />
+            </div>
+            <div class="form-group">
+              <label>Confirm Password:</label>
+              <input type="text" class="form-control" name="cpwd" #cpwd="ngModel" [ngModel]="user.password.cpwd" />
+            </div>
+
+            <div class="alert alert-danger" *ngIf="(userPassword.invalid || userPassword.value?.pwd != userPassword.value?.cpwd) && userPassword.touched">
+              <div *ngIf="pwd.errors?.required">
+                required
+              </div>
+             <div *ngIf="userPassword.value?.pwd != userPassword.value?.cpwd">not match</div>
+            </div>
+            <!-- <div class="alert alert-danger" *ngIf="pwd.invalid && pwd.touched">
+              <div *ngIf="pwd.errors?.required">required</div>
+            </div>
+            <div class="alert alert-danger" *ngIf="userPassword.value?.pwd != userPassword.value?.cpwd && cpwd.touched">
+              not match
+            </div> -->
+          </div>
+
+          <div class="form-group">
+            <label>Gender:</label>
+            <select name="gender" class="form-control" [ngModel]="user.gender">
+              <option *ngFor="let g of gender" [value]="g">{{g}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="checkbox" name="terms" [ngModel]="user.terms" />
+              I accept the terms & condition for the registration.
+            </label>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-outline-primary">Submit</button>
+          </div>
+        </form>
+        <p>{{frm.value | json}}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+
+<div class="text-center">
+  <h3>Data Binding</h3>
+  <figure>
+    <img [src]="imgPath" [alt]="imgName" width="300px" height="200px" /><!--properbiningty -->
+    <figcaption>
+      <h4>{{ imgName }}</h4>
+    </figcaption>
+    <button type="button" (click)="changeImage()">Toggle Image</button><!--event binding-->
+<br><br>
+    <input type="text" name="order" [(ngModel)]="order" /><br><!--twoway bindingg-->
+    <span class="order-text">Your order is {{order}}</span> <!--interpolation-->
+  </figure>
+</div>
+

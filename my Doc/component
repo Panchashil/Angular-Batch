@@ -1,0 +1,23 @@
+Directive:use for DOM manipulation
+1.Structural/element directive: use for add and remove or manipulate the DOM,*(asteric) prefix is use  before structure directive 
+	ngFor
+	ngIf
+	ngSwitch
+2.Attribute Directive: use to change the appearence/style of DOM
+	ngStyle
+	ngClass
+
+ng-template : use to render data explicitly or conditionally, introduced in angular 4
+
+component:
+
+it is made up of three parts
+1. template:which represent a view, this is created using html & will be use as interface in angular app
+2. class: it is nothing but a code that supports the view, this is created using typescript, the class can any other prog lang contains 
+   properties & methods that can be control the business/prog logic & the view.
+   eg. hide & show method based on the value of property
+3. metadata: component has some metadata attached to it.this is a info that angular needs to decide the class is just a component or a regular class.
+   metadata define using decorator which is a feature in typescript. it is nothing but a function the provides the info about the class attached to it.
+   and for component the component decorator is used. if we put together then we get a angular component.
+
+component:Components are the most basic building block of an UI in an Angular application.

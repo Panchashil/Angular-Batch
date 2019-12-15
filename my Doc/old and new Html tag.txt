@@ -1,0 +1,9 @@
+b / strong
+i / em
+u /ins
+
+<acronym title="As Soon As Possible">ASAP</acronym> /
+<abbr title="As Soon As Possible">ASAP</abbraaaaaaaa>
+
+<small>
+<mark>

@@ -1,0 +1,18 @@
+Template driven form
+
+drawback of UTF is
+-Unit test is chalanged
+-redability decrease with complex forms and validation
+
+When should go for UDT
+-only when you need to create simple form nad no need to perform unit testing.
+
+ngForm-it is directive which gives valuable information about that perticular form ,it tell the 
+        value of deferent form control wether the values are valid or invalid
+
+ngModel-it is Directive which is use to track form control.we are able to bound form data using ngModel
+        
+
+ngModelGroup-it is Directive
+
+ 

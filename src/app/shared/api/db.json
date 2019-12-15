@@ -1,0 +1,40 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "empName": "Anmol",
+      "empPost": "React Developer",
+      "empSalary": 20000
+    },
+    {
+      "id": 2,
+      "empName": "Rupesh",
+      "empPost": "Angular Developer",
+      "empSalary": "25000"
+    },
+    {
+      "id": 4,
+      "empName": "snehal",
+      "empPost": "Web Developer",
+      "empSalary": "30000000000"
+    },
+    {
+      "empName": "saurav",
+      "empPost": "Angular Developer",
+      "empSalary": "50000",
+      "id": 5
+    },
+    {
+      "empName": "",
+      "empPost": "",
+      "empSalary": "",
+      "id": 6
+    },
+    {
+      "empName": "sakshi",
+      "empPost": "CEO",
+      "empSalary": "800000",
+      "id": 7
+    }
+  ]
+}

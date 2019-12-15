@@ -1,0 +1,11 @@
+Directive:use for DOM manipulation
+1.Structural/element directive: use for add and remove or manipulate the DOM,
+*(astric) prefix is use  before structure directive 
+	*ngFor
+	*ngIf
+	*ngSwitch
+2.Attribute Directive: use to change the appearence/style of DOM
+	ngStyle
+	ngClass
+
+ng-template: use to render data explicitly or conditionally, introduced in angular 4

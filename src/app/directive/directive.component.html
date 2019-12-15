@@ -1,0 +1,78 @@
+<button class="btn btn-outline-primary" type="button" (click)="displayCars()">carList</button>
+&nbsp;&nbsp;
+<button class="btn btn-outline-primary" type="button" (click)="displayBikes()">bikeList</button>
+
+<hr>
+<h3 [hidden]="!isCars" [ngClass]="myClass">Car List</h3>
+<h3 [hidden]="isCars" [ngClass]="myClass">Bike List</h3>
+
+<!-- <h3 [hidden]="!isCars" [ngClass]="isCars ? 'success' : 'danger'">Car List</h3>
+<h3 [hidden]="isCars" [ngClass]="isCars ? 'success' : 'danger'">Bike List</h3> -->
+
+<div *ngIf="isCars;then carList else bikeList"></div>
+<ng-template #carList>
+  <ol>
+    <li *ngFor="let car of cars" (click)="getItem(car)" appHover [routerLink]="['/directives',car]">{{car}}</li>
+  </ol>
+</ng-template>
+<ng-template #bikeList>
+  <ol>
+    <li *ngFor="let bike of bikes" (click)="getItem(bike)" appHover [routerLink]="['/directives',bike]">{{bike}}</li>
+  </ol>
+</ng-template>
+<br>
+
+<hr>
+<!-- <h4>{{choice}}</h4> -->
+<!-- <ol>
+  <li *ngFor="let student of students">{{student.name+" : "+student.course}}</li>
+</ol> -->
+
+<div [ngSwitch]="choice" [ngStyle]="myStyle">
+  <div *ngSwitchCase="'Honda'">You have selected Honda car & price is <strong>{{priceList[0]}}</strong>.</div>
+  <div *ngSwitchCase="'Toyota'">You have selected Toyota car & price is <strong>{{priceList[1]}}</strong>.</div>
+  <div *ngSwitchCase="'Jaguar'">You have selected Jaguar car & price is <strong>{{priceList[2]}}</strong>.</div>
+  <div *ngSwitchCase="'Tata'">You have selected Tata car & price is <strong>{{priceList[3]}}</strong>.</div>
+  <div *ngSwitchCase="'Suzuki'">You have selected Suzuki bike & price is <strong>{{priceList[4]}}</strong>.</div>
+  <div *ngSwitchCase="'Hero'">You have selected Hero bike & price is <strong>{{priceList[5]}}</strong>.</div>
+  <div *ngSwitchCase="'Bajaj'">You have selected Bajaj bike & price is <strong>{{priceList[6]}}</strong>.</div>
+  <div *ngSwitchCase="'Tvs'">You have selected Tvs bike & price is <strong>{{priceList[7]}}</strong>.</div>
+  <div *ngSwitchDefault>Please select car/Bike.</div>
+</div>
+<hr>
+<button class="btn btn-outline-primary" (click)="changeClass()">Change Class</button>&nbsp;&nbsp;
+<button class="btn btn-outline-primary" (click)="changeStyle()">Change Style</button>
+<hr>
+
+<!-- <hr>
+
+<div *ngIf="democond;else notAvail">
+  <ol>
+    <li *ngFor="let car of cars">{{car}}</li>
+  </ol>
+</div>
+<ng-template #notAvail>
+  cars are not available.
+</ng-template>
+<hr>
+<h3 [hidden]="!democond" [ngClass]="myClass">Car List</h3>
+<h3 [hidden]="democond" [ngClass]="myClass">Bike List</h3><br>
+<div *ngIf="democond;then Avail else notAvail1"></div>
+<ng-template #Avail>
+  <ol>
+    <li *ngFor="let car of cars" (click)="getCars(car)">{{car}}</li>
+  </ol>
+</ng-template>
+<ng-template #notAvail1>
+  cars are not available.
+</ng-template>
+
+<div [ngSwitch]="choice1" [ngStyle]=myStyle>
+  <div *ngSwitchCase="'Honda'">You are select Honda</div>
+  <div *ngSwitchCase="'Toyota'">You are select Toyota</div>
+  <div *ngSwitchCase="'Jaguar'">You are select Jaguar</div>
+  <div *ngSwitchCase="'Tata'">You are select Tata</div>
+  <div *ngSwitchDefault>select car</div>
+</div>
+<hr> -->
+<p *ngFor="let i of even">{{ i }}</p>

@@ -1,0 +1,77 @@
+
+The typeof operator in JavaScript
+
+creating an array.
+
+var cars = ["Saab", "Volvo", "BMW"];
+Note: Array indexes start with 0. [0] is the first element. [1] is the second element.
+
+Access Full Arrray 
+var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars;
+
+and Array element
+var cars = ["Saab", "Volvo", "BMW"];
+cars[0] = "Opel";
+document.getElementById("demo").innerHTML = cars[0];
+
+Array element can be Object
+JavaScript variables can be objects. Arrays are special kinds of objects.
+Because of this, you can have variables of different types in the same Array
+You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array
+
+myArray[0] = Date.now;
+myArray[1] = myFunction;
+myArray[2] = myCars;
+
+Array Property And Methode
+var x = cars.length;   // The length property returns the number of elements
+var y = cars.sort();   // The sort() method sorts arrays
+
+
+Array Methods
+1.push()         //method insert the last element from an array
+  ex:fruits.push("Kiwi");
+
+2.pop()          //method removes the last element from an array.
+  ex:fruits.pop();
+
+3.unshift()      //method adds a new element to an array (at the beginning)
+   ex:fruits.unshift("Lemon");
+  
+4.shift()       //method removes the first array element
+   ex:fruits.shift();
+
+5. splice(starting index;no of element to delete;no of elemwnt to add)    //method can be used to add new element or remove element into an array 
+   
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+
+The first parameter (2) defines the position where new elements should be added
+The second parameter (0) defines how many elements should be removed.
+The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+
+mergung (Concatinating) Array 
+ 6.concat()    //method creates a new array by merging (concatenating) existing arrays.
+
+   ex:var myGirls = ["Cecilie", "Lone"];
+      var myBoys = ["Emil", "Tobias", "Linus"];
+      var myChildren = myGirls.concat(myBoys);   // Concatenates (joins) myGirls and myBoys
+
+   adding more than one arrar
+  var myChildren = myGirls.concat(myBoys,myparent);
+
+7.slice()    //method slices out a piece of an array into a new array
+
+
+
+
+Deleting an Array element "delete" operator
+   delete fruit[0]   //Using delete may leave undefined holes in the array
+
+
+The concat() method can also take values as arguments.
+var arr1 = ["Cecilie", "Lone"];
+var myChildren = arr1.concat(["Emil", "Tobias", "Linus"]);
+
+

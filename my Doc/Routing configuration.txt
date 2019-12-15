@@ -1,0 +1,30 @@
+Routing in Angular
+->Generate a project with app routing option
+->generate any two component for routing or navigation
+->configure route
+->add button and use derective to navigate
+fallow step for routing
+step1:star a project with routing->ng new project-Name --routing.(this is for new project)
+
+step2:we need to add base tad(<base href="/">) in the head section of app.index.html 
+      this is required ,because of this application know how to construct "url" while nevigating.
+
+step3:in the app.module.ts file import {AppRoutingModule} from './app-routing.module'; and add "AppRoutingModule"
+      in import array; imort:[AppRoutingModule].
+
+step4:into the app.routing.module.ts file there is "const routes: Routes". in that we have to define
+      two route as object. 
+
+
+Routing: use to navigate component
+Types:
+default
+redirect 
+wildcard: page-not-found
+parametarized
+child
+
+
+routerLink: set path in dom
+router-outlet: use to render routing output
+

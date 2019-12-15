@@ -1,0 +1,78 @@
+<div class="container" mt-2>
+<h3>Types of pipes in In Angular</h3>
+<ul style="list-style-type: circle;">
+<li>LowerCase Pipes</li>
+<li>UperCase Pipes</li>
+<li>TitleCase Pipes</li>
+<li>SliceCase Pipes</li>
+
+<li>Number Pipes</li>
+<li>JSON Pipes</li>
+<li>Percent Pipes</li>
+<li>Currency Pipes</li>
+<li>Date Pipes
+  <ol>
+    <li>date:'short'</li>
+    <li>date:'shortDate'</li>
+    <li>date:'mediumDate'</li>
+    <li>date:'fullDate'</li>
+
+    <li>date:'shortTime'</li>
+    <li>date:'mediumTime'</li>
+    <li>date:'longTime'</li>
+  </ol>
+  </li>
+<li>Custome Pipes</li>
+</ul>
+
+<hr><hr>
+<!-- LoweCase Pipes -->
+<p>Defaulr String:{{title}}</p>
+<p>LowerCase Pipes:{{title | lowercase}}</p>
+<p>UpperCase Pipes:{{title | uppercase}}</p>
+<p>Capitalise Pipes:{{title | titlecase}}</p>
+
+<hr>
+<!-- slice Pipes -->
+<p>Defaulr String:{{title}}</p>
+<p>slice pipes: {{title |slice:'5':'15'}} </p>
+<p>slice pipes: {{title |slice:'5'}} </p>
+
+<!-- number Pipes -->
+<p>Default Number:{{123456789}}</p>
+<p>Number pipes:{{12.34567890 | number:'4.1-3'}}</p>
+
+<!-- Json pipes -->
+<p>my Object is :{{mycar}}</p>
+<p>my Object is :{{mycar | json}}</p>
+
+<!-- percent pipes -->
+<p>percent pipes:{{0.07 | percent}}</p>
+
+<!-- currency pipes -->
+<p>{{ 15 | currency:'INR' }}</p>
+<p>{{ 15 | currency:'INR':'code' }}</p>
+
+<p>{{ 15 | currency:'NPR' }}</p>
+<p>{{ 15 | currency:'NPR':'code' }}</p>
+
+<p>{{ 15 | currency:'USD' }}</p>
+<p>{{ 15 | currency:'USD':'code' }}</p>
+
+<!-- date pipe -->
+
+<p>{{ date }}</p>
+<p>{{ date | date }}</p>  
+<p>{{ date | date:'short' }}</p>
+<p>{{ date | date:'shortDate' }}</p>
+<p>{{ date | date:'mediumDate' }}</p>
+
+<p>{{ date | date:'shortTime' }}</p>
+
+<!-- custom pipes -->
+
+<!-- <p> Custome Pipes {{ num | sort :'asc'}}</p>
+<p> Custome Pipes {{ num | sort :'dsc'}}</p> -->
+
+
+</div>

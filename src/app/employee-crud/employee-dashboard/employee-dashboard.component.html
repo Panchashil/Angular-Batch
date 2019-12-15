@@ -1,0 +1,42 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-lg-3">
+      <button class="btn btn-outline-primary btn-sm mb-3" [routerLink]="['/employee-crud','add-employee']"><i
+          class="fa fa-plus" aria-hidden="true"></i> Create</button>
+    </div>
+    <div class="col-lg-3 offset-lg-6">
+      <input type="text" class="form-control form-control-sm" placeholder="Search..." [(ngModel)]="searchKey">
+    </div>
+  </div>
+
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Salary</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees | filter:searchKey | paginate: { itemsPerPage: itemsCount, currentPage: p }">
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.empName }}</td>
+        <td>{{ emp.empPost }}</td>
+        <td>{{ emp.empSalary }}</td>
+        <td>
+          <a class="text-decoration-none text-success" [routerLink]="['/employee-crud','edit-employee',emp.id]"><i
+              class="fa fa-pencil-square-o" aria-hidden="true"></i></a> |
+          <a class="text-decoration-none text-danger" (click)="deleteEmp(emp.id)"><i class="fa fa-trash-o"
+              aria-hidden="true"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-center">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+
+</div>
